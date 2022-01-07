@@ -1,0 +1,44 @@
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+.field_tags {
+    @include placeholder-color($cGrey);
+    background-color: $cInput;
+    color: $color;
+    border: 1px solid $cInput;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font: $font-size $font;
+    letter-spacing: $letter-spacing;
+    height: 48px;
+    line-height: 49px;
+    padding: 0 20px;
+    transition: .2s ease-in background, .2s ease-in border-color, .2s ease-in color;
+
+    .field_tags & {
+        background-color: transparent !important;
+        background: transparent !important;
+        border: none !important;
+
+        display: block;
+        border: none;
+    }
+
+    &:hover {
+        background-color: $cInput__hover;
+        border-color: $cInput__hover;
+    }
+    &:focus {
+        background-color: $cInput;
+        border-color: $cInput;
+        outline: none;
+    }
+    &:disabled {
+        opacity: .6;
+    }
+}

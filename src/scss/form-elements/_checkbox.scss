@@ -1,0 +1,94 @@
+input[type="checkbox"] {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+
+    & + label {
+        cursor: pointer;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 0 0 0 42px;
+        min-width: 32px;
+        min-height: 32px;
+        position: relative;
+        margin: 0;
+        transition: .2s ease-in-out color;
+        // &.checkbox-small {
+        //     min-width: 24px;
+        //     min-height: 24px;
+        // }
+        &::before {
+            content: '';
+            color: transparent;
+            border-radius: 8px;
+            border: none;
+            box-sizing: border-box;
+            background: $cGrey;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 32px;
+            width: 32px;
+            &.checkbox-small {
+                height: 24px;
+                width: 24px;
+            }
+            transition: .1s ease-in-out background;
+        }
+        &::after {
+            content: '';
+            background:  url('~@/assets/img/check.svg') no-repeat center center;
+            background-size: 16px auto;
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            height: 13px;
+            width: 16px;
+            opacity: 0;
+            transition: .1s ease-in-out opacity;
+        }
+        &:hover::before {
+            border-color: $cViolet;
+        }
+    }
+    &:checked + label::before {
+        background: $cViolet;
+    }
+    &:checked + label::after {
+        opacity: 1;
+    }
+    &:disabled + label::before {
+        cursor: default;
+        opacity: .3;
+    }
+}
+.checkbox-list{
+    margin-bottom: 16px;
+    &__title{     
+        font-weight: 500;
+        font-size: 16px;          
+        color: #fff;   
+        padding: 0 14px;
+        opacity: 0.3;
+    }
+}
+input.checkbox-small[type="checkbox"]
+{  
+    display: none; 
+    & + label {   
+        min-width: 24px;
+        min-height: 24px;
+        line-height: 24px;
+        padding: 0 0 0 24px;
+        &::before {
+            height: 24px;
+            width: 24px;
+        }
+        &::after{
+            top: 6px;
+            left: 7px;
+            height: 12px;
+            width: 10px;
+        }
+    }   
+}

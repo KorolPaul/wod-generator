@@ -1,0 +1,41 @@
+.dropdown {
+    cursor: pointer;
+    position: relative;
+
+    &_list {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        background: #FFF9F9;
+        box-shadow: 0px 10px 20px rgba(255, 95, 95, 0.1);
+        border-radius: 16px;
+        padding: 0 16px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translate(-50%, -20px) scale(.9);
+        transition: .2s $easing opacity,
+                    .2s $easing transform;
+
+        .dropdown.opened & {
+            opacity: 1;
+            transform: translate(-50%, 0) scale(1);
+            pointer-events: all;
+        }
+    }
+    &_list-item {
+        color: $cBlack;
+        font-size: 14px;
+        line-height: 17px;
+        padding: 14px;
+        border-top: 1px solid rgba($cBlack, .1);
+        transition: .2s $easing opacity;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        &:hover {
+            opacity: .6;
+        }
+    }
+}

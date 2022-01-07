@@ -1,0 +1,63 @@
+html,
+body {
+    min-height: 100vh;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(250,210,210,1) 0%, rgba(255,89,69,1) 48%, rgba(250,210,210,1) 100%);
+    color: $color;
+    font: 16px $font;
+    margin: 0;
+    padding: 56px 0 122px;
+    box-sizing: border-box;
+    letter-spacing: $letter-spacing;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+a {
+    color: $cGreen;
+    text-decoration: none;
+}
+
+th,
+td {
+    padding: 20px 20px 20px 0;
+    border-bottom: 1px solid rgba(#fff, 0.1);
+    text-align: left;
+}
+
+th {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: $cGrey;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(#fff, 0.1);
+    border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(#fff, 0.3);
+}
+
+:-webkit-autofill {
+    -webkit-text-fill-color: $cInput !important;
+}

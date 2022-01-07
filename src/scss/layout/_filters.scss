@@ -1,0 +1,50 @@
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_section {
+        border: none;
+    }
+    &_section-title {
+        font-size: 14px;
+        line-height: 17px;
+        opacity: .6;
+        display: block;
+        margin: 0 0 16px;
+    }
+
+    input[type="radio"] {
+        position: absolute;
+        visibility: hidden;
+        pointer-events: none;
+
+        & + label {
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 22px;
+            opacity: .6;
+            margin: 0 12px 0 0;
+            position: relative;
+            transition: .2s $easing all;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 2px;
+                right: 0;
+                border-bottom: 1px solid transparent;
+            }
+        }
+
+        &:checked + label {
+            opacity: 1;
+            text-shadow: 0 0 2px $color;
+
+            &::after {
+                border-color: currentColor;
+            }
+        }
+    }
+}

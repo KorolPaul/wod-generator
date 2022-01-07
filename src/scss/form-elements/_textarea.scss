@@ -1,0 +1,21 @@
+textarea {
+    @include placeholder-color($cGrey);
+    background-color: $cInput;
+    color: $color;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font: $font-size $font;
+    letter-spacing: $letter-spacing;
+    height: 144px;
+    padding: 10px 20px;
+    resize: none;
+    transition: .2s ease-in background;
+
+    &:hover {
+        background-color: $cInput__hover;
+    }
+    &:focus {
+        background-color: $cInput;
+    }
+}

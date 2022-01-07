@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Wod generator</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Krepatura</a>
+    </header>
+
+    <main class="content">
+        <form class="filters">
+            <fieldset class="filters_section">
+                <span class="filters_section-title">Уровень</span>
+                <div class="filters_section-content">
+                    <input type="radio" name="athlete-level" id="novice">
+                    <label for="novice">Новичок</label>
+                    <input type="radio" name="athlete-level" id="athlete">
+                    <label for="athlete">Атлет</label>
+                    <input type="radio" name="athlete-level" id="profi">
+                    <label for="profi">Новичок</label>
+                </div>
+            </fieldset>
+            <fieldset class="filters_section">
+                <span class="filters_section-title">Группа мышц</span>
+                <div class="filters_section-content">
+                    <drop-down id="muscle-group">
+                        <option value="Спина">Спина</option>
+                        <option value="Грудь">Грудь</option>
+                        <option value="Ноги">Ноги</option>
+                    </drop-down>
+                </div>
+            </fieldset>
+            <fieldset class="filters_section">
+                <span class="filters_section-title">Пульс</span>
+                <div class="filters_section-content">
+                    <input type="radio" name="pulse" id="pulse-120">
+                    <label for="pulse-120">120</label>
+                    <input type="radio" name="pulse" id="pulse-150">
+                    <label for="pulse-150">150</label>
+                    <input type="radio" name="pulse" id="pulse-180">
+                    <label for="pulse-180">180</label>
+                </div>
+            </fieldset>
+            <fieldset class="filters_section">
+                <span class="filters_section-title">Продолжительность</span>
+                <div class="filters_section-content">
+                    <input type="range" name="time" id="time" min="5" max="60" step="5">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p class="description">Просто нажми кнопку подобрать или настрой фильтр под себя и приступай к тренировке</p>
+    </footer>
+    <script src="src/js/dropdown.js"></script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
