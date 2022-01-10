@@ -1,0 +1,41 @@
+.range-slider {
+    &_bar {
+        position: relative;
+        height: 1px;
+        background-color: currentColor;
+    }
+    &_thumb {
+        background-color: currentColor;
+        border-radius: 50%;
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        top: -3px;
+        user-select: none;
+
+        &__min {
+            left: 0;
+        }
+        &__max {
+            right: 0;
+        }
+
+        &:active {
+            z-index: 2;
+        }
+        &::after {
+            content: attr(data-value) ' min';
+            position: absolute;
+            left: 50%;
+            top: calc(100% + 5px);
+            transform: translateX(-50%);
+            background-color: $color;
+            color: $cBlack;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 16px;
+            padding: 8px 14px;
+            white-space: nowrap;
+        }
+    }
+}

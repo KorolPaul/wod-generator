@@ -15,7 +15,7 @@
             const title = document.createElement('span');
             title.classList.add('dropdown_title');
             title.innerText = this.options[0].innerText;
-            this.selectedValue = title;
+            this.selectedValue = title.innerText;
             this.titleRef = title;
             title.addEventListener('click', () => this.toggle())
             this.appendChild(title);
@@ -34,7 +34,6 @@
             }
 
             this.appendChild(list);
-            document.addEventListener('dropdown-change', this.changeValue);
         }
 
         static get observedAttributes() {
@@ -54,9 +53,7 @@
             this.titleRef.innerText = value;
             this.toggle();
 
-            new CustomEvent('custom-event', {
-                value
-            })
+            this.dispatchEvent(new Event('change'));
         }
     }
 
