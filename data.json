@@ -1,0 +1,99 @@
+{
+    "excercises": [
+
+    ],
+    "complexes": [
+        {
+            "type": "amrap",
+            "complexity": "5",
+            "cap": 260,
+            "excercises": [
+                {
+                    "name": "Челночный бег",
+                    "count": 20
+                },
+                {
+                    "name": "Удары молотом",
+                    "count": 10
+                },
+                {
+                    "name": "Строгие подтягивания",
+                    "count": 20
+                },
+                {
+                    "name": "Отдых",
+                    "time": 60
+                }
+            ]
+        },
+        {
+            "type": "rounds",
+            "rounds": 3,
+            "complexity": "5",
+            "excercises": [
+                {
+                    "name": "Дж. Джек",
+                    "count": 20
+                },
+                {
+                    "name": "Выход в планку",
+                    "count": 10
+                },
+                {
+                    "name": "Гиперэкстензия",
+                    "count": 10
+                },
+                {
+                    "name": "Скручивания",
+                    "count": 10
+                }
+            ]
+        },
+        {
+            "type": "amrap",
+            "complexity": "5",
+            "cap": 240,
+            "excercises": [
+                {
+                    "name": "Калории",
+                    "count": 20
+                },
+                {
+                    "name": "Взятие штанги на грудь",
+                    "count": 10
+                },
+                {
+                    "name": "Толчок штанги",
+                    "count": 20
+                },
+                {
+                    "name": "Отдых",
+                    "time": 60
+                }
+            ]
+        },
+        {
+            "type": "amrap",
+            "complexity": "5",
+            "cap": 240,
+            "excercises": [
+                {
+                    "name": "Двойные прыжки на скакалке",
+                    "count": 100
+                },
+                {
+                    "name": "Тяга гантели в упоре лежа",
+                    "count": 10
+                },
+                {
+                    "name": "Берпи",
+                    "count": 10
+                },
+                {
+                    "name": "Отдых",
+                    "time": 60
+                }
+            ]
+        }
+    ]
+}

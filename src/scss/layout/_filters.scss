@@ -1,8 +1,15 @@
 .filters {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 
+    &_row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & + & {
+            margin-top: 30px;
+        }
+    }
     &_section {
         border: none;
     }

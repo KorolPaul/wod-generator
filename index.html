@@ -13,46 +13,52 @@
     </header>
 
     <main class="content">
-        <form class="filters">
-            <fieldset class="filters_section">
-                <span class="filters_section-title">Уровень</span>
-                <div class="filters_section-content">
-                    <input type="radio" name="athlete-level" id="novice" checked>
-                    <label for="novice">Новичок</label>
-                    <input type="radio" name="athlete-level" id="athlete">
-                    <label for="athlete">Атлет</label>
-                    <input type="radio" name="athlete-level" id="profi">
-                    <label for="profi">Новичок</label>
-                </div>
-            </fieldset>
-            <fieldset class="filters_section">
-                <span class="filters_section-title">Группа мышц</span>
-                <div class="filters_section-content">
-                    <drop-down id="muscle-group">
-                        <option value="Спина">Спина</option>
-                        <option value="Грудь">Грудь</option>
-                        <option value="Ноги">Ноги</option>
-                    </drop-down>
-                </div>
-            </fieldset>
-            <fieldset class="filters_section">
-                <span class="filters_section-title">Пульс</span>
-                <div class="filters_section-content">
-                    <input type="radio" name="pulse" id="pulse-120" checked>
-                    <label for="pulse-120">120</label>
-                    <input type="radio" name="pulse" id="pulse-150">
-                    <label for="pulse-150">150</label>
-                    <input type="radio" name="pulse" id="pulse-180">
-                    <label for="pulse-180">180</label>
-                </div>
-            </fieldset>
-            <fieldset class="filters_section">
-                <span class="filters_section-title">Продолжительность</span>
-                <div class="filters_section-content">
-                    <range-slider min="5" max="60">
-                </div>
-            </fieldset>
+        <form class="filters" id="filters-form">
+            <div class="filters_row">
+                <fieldset class="filters_section">
+                    <span class="filters_section-title">Уровень</span>
+                    <div class="filters_section-content">
+                        <input type="radio" name="athlete-level" id="novice" checked>
+                        <label for="novice">Новичок</label>
+                        <input type="radio" name="athlete-level" id="athlete">
+                        <label for="athlete">Атлет</label>
+                        <input type="radio" name="athlete-level" id="profi">
+                        <label for="profi">Новичок</label>
+                    </div>
+                </fieldset>
+                <fieldset class="filters_section">
+                    <span class="filters_section-title">Группа мышц</span>
+                    <div class="filters_section-content">
+                        <drop-down id="muscle-group">
+                            <option value="Спина">Спина</option>
+                            <option value="Грудь">Грудь</option>
+                            <option value="Ноги">Ноги</option>
+                        </drop-down>
+                    </div>
+                </fieldset>
+                <fieldset class="filters_section">
+                    <span class="filters_section-title">Пульс</span>
+                    <div class="filters_section-content">
+                        <input type="radio" name="pulse" id="pulse-120" checked>
+                        <label for="pulse-120">120</label>
+                        <input type="radio" name="pulse" id="pulse-150">
+                        <label for="pulse-150">150</label>
+                        <input type="radio" name="pulse" id="pulse-180">
+                        <label for="pulse-180">180</label>
+                    </div>
+                </fieldset>
+                <fieldset class="filters_section">
+                    <span class="filters_section-title">Продолжительность</span>
+                    <div class="filters_section-content">
+                        <range-slider min="5" max="60">
+                    </div>
+                </fieldset>
+            </div>
+            <div class="filters_row">
+                <input type="submit" value="Подобрать" />
+            </div>
         </form>
+        <div class="desk" id="desk"></div>
     </main>
 
     <footer class="footer">

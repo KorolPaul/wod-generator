@@ -1,0 +1,30 @@
+.desk {
+    margin: auto;
+    border-radius: 16px;
+    border: 1px solid $color;
+    padding: 16px;
+
+    &:empty {
+        display: none;
+    }
+
+    &_title {
+        text-align: center;
+        display: block;
+        margin: 0 0 8px;
+        text-transform: uppercase;
+    }
+    &_row {
+        border-top: 1px solid currentColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_cell {
+        padding: 8px 0;
+
+        &:first-child {
+            padding-right: 16px;
+        }
+    }
+}
